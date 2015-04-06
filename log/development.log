@@ -1,0 +1,758 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:04:04 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (42.3ms)
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateRecyclers (20150323162400)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "recyclers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "email" varchar, "male" boolean, "female" boolean, "comments" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150323162400"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to CreateMovies (20150323164707)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "director" varchar, "rating" integer, "comments" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150323164707"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to DeviseCreateAdmins (20150330154110)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/Jake/Downloads/tc359/db/migrate/20150330154110_devise_create_admins.rb:34)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150330154110"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20150330155215)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150330155215"]]
+  [1m[36m (21.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:05:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (10.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1507ms (Views: 1486.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/static-99981034726e91f56d0430a849b40fa5.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/application-3c20768e30c478b89398ef3681811576.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:04 -0400
+
+
+Started GET "/sign-in" for 127.0.0.1 at 2015-04-06 00:05:05 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"05yoW/Awf8vrpAbf/6TnLkDjc7EOQvZlALjLy+eRuzYLOwN32SUcgsHmHodZPzamWFi0DQ8QWWHavCFwLpTKQA==", "email"=>"fritzchr@msu.edu", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "fritzchr@msu.edu"]]
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 103ms (Views: 100.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:09 -0400
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ih75ZeEbdqz1zsd8XA+Betz/jdbi7/5EXxzuLALFlgP6uVJJyA4V5d+M3yT6lFDyxERKauO9UUCFGASXy8DndQ==", "email"=>"fritzchr@msu.edu", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "fritzchr@msu.edu"]]
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:17 -0400
+
+
+Started GET "/cat-pictures" for 127.0.0.1 at 2015-04-06 00:05:20 -0400
+Processing by StaticController#cats as HTML
+  Rendered static/cats.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 741ms (Views: 96.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:05:21 -0400
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "fritzchr@msu.edu"], ["password_digest", "$2a$10$J1VAk4MSTaWhRDNbZDalqe.M4USL/nJ2npJ8V148WPowdk0AA8AiS"], ["created_at", "2015-04-06 04:05:51.875972"], ["updated_at", "2015-04-06 04:05:51.875972"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:06:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (15.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 183ms (Views: 164.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2015-04-06 00:06:12 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_form.html.erb (17.1ms)
+  Rendered movies/new.html.erb within layouts/application (20.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 125ms (Views: 117.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UN36JqOlYX4GSrtidpBkO+OuDP3PftqlIN9iakGq0fyIelEKirACNywIozrQC7Wz+xXLQc4sdaH624jRiK+gig==", "movie"=>{"title"=>"Jake", "director"=>"Jake", "rating"=>"10", "comments"=>"Good movie"}, "commit"=>"Create Movie"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "director", "rating", "comments", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Jake"], ["director", "Jake"], ["rating", 10], ["comments", "Good movie"], ["created_at", "2015-04-06 04:06:20.097645"], ["updated_at", "2015-04-06 04:06:20.097645"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:20 -0400
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2015-04-06 00:06:22 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_form.html.erb (2.5ms)
+  Rendered movies/edit.html.erb within layouts/application (4.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2015-04-06 00:06:25 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cat-pictures" for 127.0.0.1 at 2015-04-06 00:06:27 -0400
+Processing by StaticController#cats as HTML
+  Rendered static/cats.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 878ms (Views: 53.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cat-pictures" for 127.0.0.1 at 2015-04-06 00:06:28 -0400
+Processing by StaticController#cats as HTML
+  Rendered static/cats.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 851ms (Views: 91.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:06:29 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/movies/1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"34a77hHPp0uu2fzMynd5QoDjxCEPUU7JI4WJtYBMUHAHIRDCONrEAoSb5JRs7KjKmFgDnQ4D4c35gWMOSUkhBg==", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:32 -0400
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-06 00:06:42 -0400
+Processing by StaticController#about as HTML
+  Rendered static/about.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 94ms (Views: 93.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cat-pictures" for 127.0.0.1 at 2015-04-06 00:06:44 -0400
+Processing by StaticController#cats as HTML
+  Rendered static/cats.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 937ms (Views: 91.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:06:47 -0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:06:50 -0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/sign-out" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CwUEAjmoH4w3XoHGb+yreFNvI3XL70Hw6f4FmJ/5hR3Toq8uEL18xR0cmZ7Jd3rwS9Tkycq97vQz+u8jVvz0aw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:06:55 -0400
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:07:40 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 107ms (Views: 106.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sign-in" for 127.0.0.1 at 2015-04-06 00:07:43 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MQgF0flfl/Se8mtJ7jVEJ37rP8UPgBa2UoWH52Ewws4Y4s7bvAdFvg50fWBIwSYhUBrQxVsr14DTvykVIGyfQ==", "email"=>"fritzchr@msu.edu", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "fritzchr@msu.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 96ms (Views: 95.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:07:50 -0400
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:07:54 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2015-04-06 00:07:56 -0400
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_form.html.erb (2.2ms)
+  Rendered movies/new.html.erb within layouts/application (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2015-04-06 00:09:52 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_form.html.erb (2.6ms)
+  Rendered movies/new.html.erb within layouts/application (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 71ms (Views: 57.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/static-99981034726e91f56d0430a849b40fa5.css?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/application-3c20768e30c478b89398ef3681811576.css?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:09:53 -0400
+
+
+Started POST "/movies" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UCbt/bkUWXtJ9AYIORET7AOYIVoQYlPXw0tjoO4uo2SIgUbRkAE6MmO2HlCfisJkGyPm5hEw/NMZT4kbJyvSEg==", "movie"=>{"title"=>"Jake", "director"=>"Jake", "rating"=>"2001", "comments"=>"Why"}, "commit"=>"Create Movie"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "director", "rating", "comments", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Jake"], ["director", "Jake"], ["rating", 2001], ["comments", "Why"], ["created_at", "2015-04-06 04:10:03.615010"], ["updated_at", "2015-04-06 04:10:03.615010"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/session-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/static-99981034726e91f56d0430a849b40fa5.css?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/application-3c20768e30c478b89398ef3681811576.css?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/movies-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/session-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/static-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for 127.0.0.1 at 2015-04-06 00:10:03 -0400
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:12:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cat-pictures" for 127.0.0.1 at 2015-04-06 00:12:10 -0400
+Processing by StaticController#cats as HTML
+  Rendered static/cats.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 994ms (Views: 94.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-06 00:12:12 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2015-04-06 00:12:17 -0400
+Processing by MoviesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_form.html.erb (2.1ms)
+  Rendered movies/new.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-06 00:12:20 -0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.1ms)
